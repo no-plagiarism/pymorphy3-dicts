@@ -17,7 +17,7 @@ stuff/
 *.xml
 MANIFEST$
 compiled-dicts
-pymorphy2-dicts-*
+pymorphy3-dicts-*
 *.egg-info
 dict.opcorpora.xml
 annot.corpus.xml

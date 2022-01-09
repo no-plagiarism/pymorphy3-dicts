@@ -20,7 +20,7 @@ import subprocess
 
 from docopt import docopt
 from cookiecutter.main import cookiecutter
-from pymorphy2 import opencorpora_dict
+from pymorphy3 import opencorpora_dict
 
 OUT_PATH = "compiled-dicts"
 
@@ -56,7 +56,7 @@ class RussianBuilder(object):
     def package(self):
         print("Creating Python package")
         cookiecutter(
-            template="cookiecutter-pymorphy2-dicts",
+            template="cookiecutter-pymorphy3-dicts",
             no_input=True,
             overwrite_if_exists=True,
             extra_context={
@@ -89,7 +89,7 @@ class UkrainianBuilder(object):
 
     def package(self):
         print("Creating Python package")
-        cookiecutter("cookiecutter-pymorphy2-dicts", no_input=True, extra_context={
+        cookiecutter("cookiecutter-pymorphy3-dicts", no_input=True, extra_context={
             'lang': 'uk',
             'lang_full': 'Ukrainian',
             'version': get_version(corpus=False, timestamp=True),

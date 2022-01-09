@@ -32,17 +32,17 @@ import logging
 import opencorpora
 from docopt import docopt
 
-import pymorphy2.lang
-from pymorphy2 import opencorpora_dict
-from pymorphy2.opencorpora_dict.probability import add_conditional_tag_probability
-from pymorphy2.opencorpora_dict.storage import update_meta
+import pymorphy3.lang
+from pymorphy3 import opencorpora_dict
+from pymorphy3.opencorpora_dict.probability import add_conditional_tag_probability
+from pymorphy3.opencorpora_dict.storage import update_meta
 
 
-logger = logging.getLogger('pymorphy2')
+logger = logging.getLogger('pymorphy3')
 
 ROOT = os.path.dirname(__file__)
-OUT_PATH = os.path.join(ROOT, 'pymorphy2_dicts', 'data')
-VERSION_FILE_PATH = os.path.join(ROOT, 'pymorphy2_dicts', 'version.py')
+OUT_PATH = os.path.join(ROOT, 'pymorphy3_dicts', 'data')
+VERSION_FILE_PATH = os.path.join(ROOT, 'pymorphy3_dicts', 'version.py')
 
 
 def write_version(format_version, dict_revision, corpus_revision):
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     out_path = args['<out-folder>']
 
     try:
-        lang = getattr(pymorphy2.lang, args['--lang'])
+        lang = getattr(pymorphy3.lang, args['--lang'])
     except AttributeError:
         print("Unknown language code: %r" % args['--lang'])
         sys.exit(1)
