@@ -1,0 +1,11 @@
+{
+  "author": "Danylo Halaiko",
+  "author_email": "d9nich@pm.me",
+  "version": "dev",
+  "lang": "ru",
+  "lang_full": "Russian",
+  "distribution_name": "pymorphy3-dicts-{{ cookiecutter.lang }}",
+  "package_name": "pymorphy3_dicts_{{ cookiecutter.lang }}",
+  "data_license": "`Creative Commons Attribution-Share Alike <http://creativecommons.org/licenses/by-sa/3.0/>`_",
+  "dev_status": "4 - Beta"
+}
