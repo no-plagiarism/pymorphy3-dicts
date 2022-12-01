@@ -1,7 +1,7 @@
 pymorphy3-dicts
 ===============
 
-Scripts for updating pymorphy3_ dictionaries. License is GPL v3.
+Scripts for updating pymorphy3_ dictionaries. License is MIT.
 
 To compile a dictionary from a source XML file in OpenCorpora XML format
 use ``build-dict.py`` script.
